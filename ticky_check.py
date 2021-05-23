@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
 
 import re
-import os
 import sys
 import operator
 import csv
 
-#dictionary that contains all the ERROR messages logged and how many times
-#each error was found.
+#Dictionary that contains all the ERROR messages logged and how many times each error was found.
 
 error = {}
 
@@ -16,13 +14,12 @@ error = {}
 
 per_user = {}
 
-#Variable that contains the input file from command line
+
+# Instead of using file = sys.argv[1], you can use file = 'syslog.log', or do "with open('syslog.log') as f:" directly, since command prompt input is not requested
+# on this exercise!
+
 
 file = sys.argv[1]
-
-#variable that store the username found on each line of the log system
-
-
 
 
 with open(file) as f:
